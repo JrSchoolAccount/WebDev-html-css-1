@@ -23,7 +23,8 @@ select {
 
 html {
   color: black;
-  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-weight: bold; */
   height: 100vh;
   min-width: 600px;
   background-image: linear-gradient(rgb(254, 198, 197), rgb(255, 125, 125));
@@ -32,13 +33,15 @@ html {
 }
 
 h1 {
+  font-family: Times New Roman;
+  font-weight: bold;
   font-size: 55px;
   margin: 0;
 }
 
 p {
   font-size: 20px;
-  margin: 20px 0 50px;
+  margin: 10px 0 30px;
 }
 
 .container {
@@ -59,6 +62,7 @@ button {
   border: 1px solid;
   border-radius: 5px;
   width: 60px;
+  font-weight: bold;
 }
 
 button:hover {
@@ -95,7 +99,7 @@ ul {
 }
 
 li {
-  animation: fadeUp 0.5s;
+  animation: fadeUp 0.4s;
 }
 
 li:hover {
@@ -103,7 +107,7 @@ li:hover {
 }
 
 small {
-  font-size: 16px;
+  font-size: 20px;
   font-style: italic;
   margin-top: 1px;
   color: red;
@@ -143,11 +147,11 @@ button {
 }
 
 .slide-down {
-  animation: slideDown 0.6s;
+  animation: slideDown 0.4s;
   animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Keyframes for animations */
+/* Keyframes */
 
 @keyframes blink {
   0% {
@@ -162,14 +166,13 @@ button {
 }
 
 @keyframes slideDown {
-  from {
-    visibility: hidden;
-    position: absolute;
-    top: -900px;
+  0% {
+    transform: translateY(-250px);
+    opacity: 0;
   }
-  to {
-    visibility: visible;
-    top: 0;
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
