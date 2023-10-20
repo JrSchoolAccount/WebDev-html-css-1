@@ -1,15 +1,13 @@
 // Html elements
 const inputTask = document.querySelector("#input-task");
 const list = document.querySelector("ul");
-const btn = document.querySelector("#submit-task");
+const button = document.querySelector("#submit-task");
 const smallElement = document.querySelector("small");
 const completedInfo = document.querySelector("p");
-const submitButton = document.querySelector("button");
 
 // Variables
 let completedCounter = 0;
 let blink = "";
-let blinkBtn = "";
 
 // Array objects with Todo tasks
 const todoArray = [];
@@ -25,7 +23,7 @@ function changeStatus(inputTask, completed) {
 }
 
 // Function add todo tasks with mouse click
-btn.addEventListener("click", function () {
+button.addEventListener("click", function () {
   // Fetch input value
   const text = inputTask.value;
 
@@ -116,18 +114,5 @@ function blinkAnimation() {
       blink = false;
       smallElement.classList.remove("blink");
     }, 4000);
-  }
-}
-
-// Function add class .blink to button and after animation remove the class.
-function blinkButton() {
-  if (blinkBtn == false) {
-    blinkBtn = !blinkBtn;
-    submitButton.className += "blink-button";
-
-    setTimeout(function () {
-      blinkBtn = false;
-      submitButton.classList.remove("blink-button");
-    }, 1000);
   }
 }

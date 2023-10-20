@@ -23,18 +23,6 @@ body {
   line-height: 1.5;
 }
 
-h1 {
-  font-family: Times;
-  font-weight: bold;
-  font-size: 55px;
-  margin: 0;
-}
-
-p {
-  font-size: 20px;
-  margin: 10px 0 30px;
-}
-
 .container {
   align-items: center;
   background-color: white;
@@ -49,9 +37,16 @@ p {
   width: 500px;
 }
 
-button {
+h1 {
+  font-family: Times;
   font-weight: bold;
-  width: 60px;
+  font-size: 55px;
+  margin: 0;
+}
+
+p {
+  font-size: 20px;
+  margin: 10px 0 30px;
 }
 
 input {
@@ -73,10 +68,24 @@ div#div-input {
   margin: 10px auto;
 }
 
+button {
+  cursor: default;
+  font-weight: bold;
+  padding: 4px 0;
+  width: 60px;
+}
+
 span {
   cursor: pointer;
   font-size: 30px;
   margin-right: 20px;
+}
+
+small {
+  color: red;
+  font-size: 20px;
+  font-style: italic;
+  margin-top: 1px;
 }
 
 ul {
@@ -91,29 +100,17 @@ li:hover {
   text-decoration: line-through;
 }
 
-small {
-  color: red;
-  font-size: 20px;
-  font-style: italic;
-  margin-top: 1px;
-}
-
-button {
-  cursor: default;
-  padding: 4px 0;
-}
-
-.completed {
-  color: gray;
-  text-decoration: line-through;
-}
-
 .fa-solid {
   color: gray;
 }
 
 .fa-solid:hover {
   color: black;
+}
+
+.completed {
+  color: gray;
+  text-decoration: line-through;
 }
 
 /* Animations */
@@ -169,17 +166,6 @@ button {
   }
 }
 
-@keyframes slide-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-250px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes fade {
   0% {
     opacity: 0;
@@ -205,6 +191,17 @@ button {
   0% {
     opacity: 0;
     transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-250px);
   }
   100% {
     opacity: 1;
