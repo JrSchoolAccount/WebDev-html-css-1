@@ -93,7 +93,7 @@ ul {
 }
 
 li {
-  animation: fadeUp 0.4s;
+  animation: fade-up 0.4s;
 }
 
 li:hover {
@@ -109,6 +109,7 @@ li:hover {
 }
 
 .completed {
+  animation: fade 0.6s;
   color: gray;
   text-decoration: line-through;
 }
@@ -125,15 +126,15 @@ li:hover {
 }
 
 .fade-text1 {
-  animation: fadeIn 1s;
+  animation: fade-in 1s;
 }
 
 .fade-text2 {
-  animation: fadeIn 1.3s;
+  animation: fade-in 1.3s;
 }
 
 .fade-text3 {
-  animation: fadeIn 1.6s;
+  animation: fade-in 1.6s;
 }
 
 .slide-down {
@@ -175,7 +176,7 @@ li:hover {
   }
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -187,7 +188,7 @@ li:hover {
   }
 }
 
-@keyframes fadeUp {
+@keyframes fade-up {
   0% {
     opacity: 0;
     transform: translateY(20px);
