@@ -1,14 +1,15 @@
 // Html elements
-const inputTask = document.querySelector("#inputTask");
+const inputTask = document.querySelector("#input-task");
 const list = document.querySelector("ul");
-const btn = document.querySelector("#submitTask");
-const info = document.querySelector("small");
-const completedInfo = document.querySelector("p");
+const btn = document.querySelector("#submit-task");
 const smallElement = document.querySelector("small");
+const completedInfo = document.querySelector("p");
+const submitButton = document.querySelector("button");
 
 // Variables
 let completedCounter = 0;
 let blink = "";
+let blinkBtn = "";
 
 // Array objects with Todo tasks
 const todoArray = [];
@@ -30,11 +31,11 @@ btn.addEventListener("click", function () {
 
   // Check that input is not empty
   if (text.length == 0) {
-    info.innerText = "Input must not be empty";
+    smallElement.innerText = "Input must not be empty";
     blinkAnimation();
     return;
   } else {
-    info.innerText = "";
+    smallElement.innerText = "";
   }
 
   // Add todo to todoArray
@@ -52,7 +53,6 @@ btn.addEventListener("click", function () {
 
   // Add trashcan icon to new span element
   const trashcan = document.createElement("span");
-  trashcan.setAttribute("class", "trashcan");
   trashcan.setAttribute("class", "fa-solid fa-trash-can-arrow-up fa-xs");
   item.appendChild(trashcan);
 
@@ -116,5 +116,18 @@ function blinkAnimation() {
       blink = false;
       smallElement.classList.remove("blink");
     }, 4000);
+  }
+}
+
+// Function add class .blink to button and after animation remove the class.
+function blinkButton() {
+  if (blinkBtn == false) {
+    blinkBtn = !blinkBtn;
+    submitButton.className += "blink-button";
+
+    setTimeout(function () {
+      blinkBtn = false;
+      submitButton.classList.remove("blink-button");
+    }, 1000);
   }
 }
