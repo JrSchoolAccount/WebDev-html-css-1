@@ -6,17 +6,17 @@
 
 * {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
   font-size: 25px;
+  margin: 0;
 }
 
 html {
-  color: black;
-  height: 100vh;
-  min-width: 600px;
   background-image: linear-gradient(rgb(254, 198, 197), rgb(255, 125, 125));
   background-repeat: no-repeat;
   background-size: auto;
+  color: black;
+  height: 100vh;
+  min-width: 600px;
 }
 
 body {
@@ -36,17 +36,17 @@ p {
 }
 
 .container {
+  align-items: center;
   background-color: white;
+  box-shadow: 2px 1px 15px -1px rgba(0, 0, 0, 0.84);
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 1px 15px -1px rgba(0, 0, 0, 0.84);
-  position: relative;
-  text-align: center;
-  align-items: center;
-  width: 500px;
+  margin: 10px auto;
   min-width: 600px;
   padding: 10px 50px 50px 50px;
-  margin: 10px auto;
+  position: relative;
+  text-align: center;
+  width: 500px;
 }
 
 button {
@@ -55,8 +55,8 @@ button {
 }
 
 input {
-  border: 1px solid;
   border-radius: 5px;
+  border: 1px solid;
   outline: none;
   padding: 4px 0;
 }
@@ -74,9 +74,9 @@ div#div-input {
 }
 
 span {
+  cursor: pointer;
   font-size: 30px;
   margin-right: 20px;
-  cursor: pointer;
 }
 
 ul {
@@ -92,10 +92,10 @@ li:hover {
 }
 
 small {
+  color: red;
   font-size: 20px;
   font-style: italic;
   margin-top: 1px;
-  color: red;
 }
 
 button {
@@ -104,8 +104,8 @@ button {
 }
 
 .completed {
-  text-decoration: line-through;
   color: gray;
+  text-decoration: line-through;
 }
 
 .fa-solid {
@@ -171,12 +171,12 @@ button {
 
 @keyframes slide-down {
   0% {
-    transform: translateY(-250px);
     opacity: 0;
+    transform: translateY(-250px);
   }
   100% {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
