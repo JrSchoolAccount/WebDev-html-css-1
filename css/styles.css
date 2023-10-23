@@ -15,7 +15,7 @@ html {
   background-repeat: no-repeat;
   background-size: auto;
   color: black;
-  height: 100vh;
+  min-height: 100%;
   min-width: 600px;
 }
 
